@@ -12,6 +12,7 @@
 		197CCDEB1E7AE12100DCEB32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197CCDE91E7AE12100DCEB32 /* Main.storyboard */; };
 		197CCDED1E7AE12100DCEB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197CCDEC1E7AE12100DCEB32 /* Assets.xcassets */; };
 		197CCDF01E7AE12100DCEB32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197CCDEE1E7AE12100DCEB32 /* LaunchScreen.storyboard */; };
+		D60098665AA6EACD747D21F5 /* Pods_Sightings_Vasteras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7230CA3AD7785F62977958 /* Pods_Sightings_Vasteras.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		197CCDEC1E7AE12100DCEB32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		197CCDEF1E7AE12100DCEB32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		197CCDF11E7AE12100DCEB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C2BDE15DF69C53C8B5A338B /* Pods-Sightings-Vasteras.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sightings-Vasteras.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sightings-Vasteras/Pods-Sightings-Vasteras.release.xcconfig"; sourceTree = "<group>"; };
+		71D31949A2E0DAFA7F5A3715 /* Pods-Sightings-Vasteras.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sightings-Vasteras.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sightings-Vasteras/Pods-Sightings-Vasteras.debug.xcconfig"; sourceTree = "<group>"; };
+		BC7230CA3AD7785F62977958 /* Pods_Sightings_Vasteras.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sightings_Vasteras.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60098665AA6EACD747D21F5 /* Pods_Sightings_Vasteras.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				197CCDE41E7AE12100DCEB32 /* Sightings-Vasteras */,
 				197CCDE31E7AE12100DCEB32 /* Products */,
+				8AD2774C9F4CE692AB3FBF5F /* Pods */,
+				73A0BD0A63D523008AF82910 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "Sightings-Vasteras";
 			sourceTree = "<group>";
 		};
+		73A0BD0A63D523008AF82910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC7230CA3AD7785F62977958 /* Pods_Sightings_Vasteras.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AD2774C9F4CE692AB3FBF5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71D31949A2E0DAFA7F5A3715 /* Pods-Sightings-Vasteras.debug.xcconfig */,
+				4C2BDE15DF69C53C8B5A338B /* Pods-Sightings-Vasteras.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 197CCDF41E7AE12100DCEB32 /* Build configuration list for PBXNativeTarget "Sightings-Vasteras" */;
 			buildPhases = (
+				5FE208D94016F3E03D33C992 /* [CP] Check Pods Manifest.lock */,
 				197CCDDE1E7AE12100DCEB32 /* Sources */,
 				197CCDDF1E7AE12100DCEB32 /* Frameworks */,
 				197CCDE01E7AE12100DCEB32 /* Resources */,
+				B25EF8C09138B89FD79411F3 /* [CP] Embed Pods Frameworks */,
+				C64C90E5D27E820C684FAD24 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FE208D94016F3E03D33C992 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B25EF8C09138B89FD79411F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sightings-Vasteras/Pods-Sightings-Vasteras-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C64C90E5D27E820C684FAD24 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sightings-Vasteras/Pods-Sightings-Vasteras-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		197CCDDE1E7AE12100DCEB32 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		197CCDF51E7AE12100DCEB32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71D31949A2E0DAFA7F5A3715 /* Pods-Sightings-Vasteras.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XVNZAPSZS5;
@@ -272,6 +348,7 @@
 		};
 		197CCDF61E7AE12100DCEB32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C2BDE15DF69C53C8B5A338B /* Pods-Sightings-Vasteras.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XVNZAPSZS5;

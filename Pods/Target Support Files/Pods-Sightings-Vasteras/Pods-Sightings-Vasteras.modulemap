@@ -1,0 +1,6 @@
+framework module Pods_Sightings_Vasteras {
+  umbrella header "Pods-Sightings-Vasteras-umbrella.h"
+
+  export *
+  module * { export * }
+}
